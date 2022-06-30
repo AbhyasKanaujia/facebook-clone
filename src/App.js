@@ -1,12 +1,17 @@
 import "./App.sass";
 import Header from "./components/header/Header";
+import LeftSidebar from "./components/leftSidebar/LeftSidebar";
+import Feed from "./components/feed/Feed";
 
 function App() {
   return (
-    <div className="mainwrp">
+    <div className="mainwrp app">
       <Header />
-      {/* Content Wrapper */}
-      {/* Left Custom Sidebar */}
+      <div className="app__body">
+        <LeftSidebar />
+        <Feed />
+        <LeftSidebar />
+      </div>
       {/* Post Timeline */}
       {/* Right Sidebar */}
     </div>
