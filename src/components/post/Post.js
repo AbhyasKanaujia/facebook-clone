@@ -14,7 +14,7 @@ const Post = ({ authorPic, authorName, timeStamp, message, optionalImg }) => {
         <Avatar src={authorPic} className="post__avatar" />
         <div className="post_info">
           <h3>{authorName}</h3>
-          <p>Current Time</p>
+          <p>{timeStamp}</p>
         </div>
       </div>
       <div className="post_bottom">

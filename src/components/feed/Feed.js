@@ -1,26 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Feed.sass";
 import StoryReel from "../storyReel/StoryReel";
 import PostCreator from "../postCreator/PostCreator";
 import Post from "../post/Post";
+import db, { collection } from "../../firebase";
+import { getDocs } from "firebase/firestore";
 
 const Feed = () => {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    const getPosts = async () => {
+      const querySnapshot = await getDocs(collection(db, "posts"));
+      const data = [];
+      querySnapshot.forEach((doc) => {
+        data.push({
+          id: doc.id,
+          data: doc.data(),
+        });
+      });
+      setPosts(data);
+    };
+    getPosts();
+  }, []);
+
   return (
     <div className="feed">
       <StoryReel />
       <PostCreator />
-      <Post
-        authorPic="https://source.unsplash.com/random/300x300/?beautiful,girl"
-        authorName="Divya Bhatnagar"
-        message={"Sample Post"}
-        optionalImg="https://source.unsplash.com/random/500x500?travel,girl"
-      />
-      <Post
-        authorPic="https://source.unsplash.com/random/300x300/?face,beautiful,woman"
-        authorName="Kavya Bhatnagar"
-        message="Hey, nice first post"
-        optionalImg="https://source.unsplash.com/random/500x500?momos,dish"
-      />
+      {posts.map((post) => (
+        <Post
+          key={post.data.id}
+          authorPic={post.data.authorPic}
+          authorName={post.data.authorName}
+          timeStamp={post.data.timeStamp}
+          message={post.data.message}
+          optionalImg={post.data.optionalImg}
+        />
+      ))}
     </div>
   );
 };

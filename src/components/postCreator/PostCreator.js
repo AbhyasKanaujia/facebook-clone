@@ -5,6 +5,7 @@ import VideocamIcon from "@mui/icons-material/Videocam";
 import PhotoLibraryIcon from "@mui/icons-material/PhotoLibrary";
 import InsertEmoticonIcon from "@mui/icons-material/InsertEmoticon";
 import { useStateValue } from "../../StateProvider";
+import db, { addDoc, collection } from "../../firebase";
 
 const PostCreator = () => {
   const [input, setInput] = useState("");
@@ -13,6 +14,21 @@ const PostCreator = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const createPost = async () => {
+      try {
+        await addDoc(collection(db, "posts"), {
+          message: input,
+          timestamp: Date.now(),
+          authorPic: user.photoURL,
+          authorName: user.displayName,
+          optionalImg: imageUrl,
+        });
+      } catch (error) {}
+    };
+
+    createPost();
+
     setInput("");
     setImageUrl("");
   };
