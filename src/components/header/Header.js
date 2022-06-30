@@ -54,7 +54,7 @@ const Header = () => {
 
       <div className="header__right">
         <div className="header__right--info">
-          <Avatar />
+          <Avatar src="https://source.unsplash.com/random/300x300/?face,beautiful,woman" />
           <h4 className="displayname">Kavya</h4>
         </div>
         <IconButton>

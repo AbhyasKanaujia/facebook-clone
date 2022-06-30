@@ -13,7 +13,7 @@ const LeftSidebar = () => {
   return (
     <div className="sidebar sidebar__left">
       <SidebarRow
-        src="https://scontent-mxp1-1.xx.fbcdn.net/v/t1.0-9/117907612_3563992490279505_8451429859961719128_n.jpg?_nc_cat=104&_nc_sid=09cbfe&_nc_ohc=v10vTrNDTuQAX_BOoTp&_nc_ht=scontent-mxp1-1.xx&oh=4886f877009445fd6742f10b84018eb7&oe=5F77D6B6"
+        src="https://source.unsplash.com/random/300x300/?face,beautiful,woman"
         title="Kavya Bhatnagar"
       />
       <SidebarRow

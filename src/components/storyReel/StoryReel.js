@@ -1,10 +1,12 @@
 import React from "react";
 import Story from "../story/Story";
 import "./StoryReel.sass";
+import AddStory from "../addStory/AddStory";
 
 const StoryReel = () => {
   return (
     <div className="stories">
+      <AddStory userAvatar="https://source.unsplash.com/random/300x300/?face,beautiful,woman" />
       <Story
         image="https://source.unsplash.com/random/?food"
         authorPic="https://source.unsplash.com/random/300x300/?face,beautiful,woman"
