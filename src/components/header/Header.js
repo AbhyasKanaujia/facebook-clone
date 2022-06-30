@@ -29,6 +29,9 @@ const Header = () => {
             className="searchinput"
           />
         </div>
+        <IconButton className="searchinput__mob">
+          <SearchIcon />
+        </IconButton>
       </div>
 
       <div className="header__middle">
