@@ -11,12 +11,12 @@ const StoryReel = () => {
         authorName="Kavya Batnagar"
       />
       <Story
-        image="https://source.unsplash.com/random/?bts"
+        image="https://source.unsplash.com/random/?gamer,girl"
         authorPic="https://source.unsplash.com/random/300x300/?girl,beautiful,face"
         authorName="Divya Bhatnagar"
       />
       <Story
-        image="https://source.unsplash.com/random/?coco"
+        image="https://source.unsplash.com/random/?life,hope,love"
         authorPic="https://source.unsplash.com/random/300x300/?girl,angel,heaven"
         authorName="Anisu Neeti Kanaujia"
       />

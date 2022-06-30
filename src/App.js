@@ -2,6 +2,7 @@ import "./App.sass";
 import Header from "./components/header/Header";
 import LeftSidebar from "./components/leftSidebar/LeftSidebar";
 import Feed from "./components/feed/Feed";
+import RightSidebar from "./components/rightSidebar/RightSidebar";
 
 function App() {
   return (
@@ -10,10 +11,8 @@ function App() {
       <div className="app__body">
         <LeftSidebar />
         <Feed />
-        <LeftSidebar />
+        <RightSidebar />
       </div>
-      {/* Post Timeline */}
-      {/* Right Sidebar */}
     </div>
   );
 }

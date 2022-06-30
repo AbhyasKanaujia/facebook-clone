@@ -9,17 +9,18 @@ const Feed = () => {
     <div className="feed">
       <StoryReel />
       <PostCreator />
-      <Post />
       <Post
         authorPic="https://source.unsplash.com/random/300x300/?beautiful,girl"
         authorName="Divya Bhatnagar"
-        message="Nice First Post Girllll"
-        optionalImg="https://source.unsplash.com/random/300x300?travel,girl"
+        message={"Sample Post"}
+        optionalImg="https://source.unsplash.com/random/500x500?travel,girl"
       />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
+      <Post
+        authorPic="https://source.unsplash.com/random/300x300/?face,beautiful,woman"
+        authorName="Kavya Bhatnagar"
+        message="Hey, nice first post"
+        optionalImg="https://source.unsplash.com/random/500x500?momos,dish"
+      />
     </div>
   );
 };
