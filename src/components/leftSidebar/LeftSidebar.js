@@ -8,14 +8,14 @@ import ChatIcon from "@mui/icons-material/Chat";
 import StorefrontIcon from "@mui/icons-material/Storefront";
 import VideoLibraryIcon from "@mui/icons-material/VideoLibrary";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { useStateValue } from "../../StateProvider";
 
 const LeftSidebar = () => {
+  const [{ user }] = useStateValue();
+
   return (
     <div className="sidebar sidebar__left">
-      <SidebarRow
-        src="https://source.unsplash.com/random/300x300/?face,beautiful,woman"
-        title="Kavya Bhatnagar"
-      />
+      <SidebarRow src={user.photoURL} title={user.displayName} />
       <SidebarRow
         Icon={LocalHospitalIcon}
         title="Covid-19 Information Center"

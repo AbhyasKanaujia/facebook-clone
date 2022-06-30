@@ -2,11 +2,14 @@ import React from "react";
 import Story from "../story/Story";
 import "./StoryReel.sass";
 import AddStory from "../addStory/AddStory";
+import { useStateValue } from "../../StateProvider";
 
 const StoryReel = () => {
+  const [{ user }] = useStateValue();
+
   return (
     <div className="stories">
-      <AddStory userAvatar="https://source.unsplash.com/random/300x300/?face,beautiful,woman" />
+      <AddStory userAvatar={user.photoURL} />
       <Story
         image="https://source.unsplash.com/random/?food"
         authorPic="https://source.unsplash.com/random/300x300/?face,beautiful,woman"

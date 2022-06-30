@@ -11,8 +11,11 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import SupervisedUserCircleRoundedIcon from "@mui/icons-material/SupervisedUserCircleRounded";
 import { Avatar, IconButton } from "@mui/material";
 import "./Header.sass";
+import { useStateValue } from "../../StateProvider";
 
 const Header = () => {
+  const [{ user }] = useStateValue();
+
   return (
     <nav className="header">
       <div className="header__left">
@@ -54,8 +57,8 @@ const Header = () => {
 
       <div className="header__right">
         <div className="header__right--info">
-          <Avatar src="https://source.unsplash.com/random/300x300/?face,beautiful,woman" />
-          <h4 className="displayname">Kavya</h4>
+          <Avatar src={user.photoURL} />
+          <h4 className="displayname">{user.displayName}</h4>
         </div>
         <IconButton>
           <AddIcon />

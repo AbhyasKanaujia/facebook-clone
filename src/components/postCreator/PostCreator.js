@@ -4,10 +4,12 @@ import { Avatar } from "@mui/material";
 import VideocamIcon from "@mui/icons-material/Videocam";
 import PhotoLibraryIcon from "@mui/icons-material/PhotoLibrary";
 import InsertEmoticonIcon from "@mui/icons-material/InsertEmoticon";
+import { useStateValue } from "../../StateProvider";
 
 const PostCreator = () => {
   const [input, setInput] = useState("");
   const [imageUrl, setImageUrl] = useState("");
+  const [{ user }] = useStateValue();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,14 +19,13 @@ const PostCreator = () => {
 
   return (
     <div className="postcreator">
-      {/* Top */}
       <div className="postcreator__top">
-        <Avatar />
+        <Avatar src={user.photoURL} />
         <form>
           <input
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="What's on your mind, Kavya Bhatnagar?"
+            placeholder={`What's on your mind, ${user.displayName}?`}
             type="text"
           />
           <input
@@ -38,7 +39,6 @@ const PostCreator = () => {
           </button>
         </form>
       </div>
-      {/* Buttom */}
       <div className="postcreator__bottom">
         <div className="postcreator__bottom--option">
           <VideocamIcon style={{ color: "red" }} />
