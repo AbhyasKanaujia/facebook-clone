@@ -38,6 +38,7 @@
 
                 .MuiSvgIcon-root
                     fill: gray
+
         .logo
             heigh: 40px
 
@@ -88,15 +89,17 @@
             &-active
                 border-bottom: 3px solid #2e81f4
 
-            .MuiSvgIcon-root
-                color: #2e81f4
+                .MuiSvgIcon-root
+                    color: #2e81f4
 
-            &:hover
-                border-radius: 4px solid #2e81f4
-                border-radius: 0
-                background-color: trasparent
+                &:hover
+                    border-radius: 4px solid #2e81f4
+                    border-radius: 0
+                    background-color: trasparent
+
     &__right
         display: flex
+        align-items: center
 
         &--info
             display: none
@@ -108,8 +111,14 @@
                 margin-left: 10px
 
             .MuiAvatar-root
-                width: 35px
-                height: 35px
+                width: 30px
+                height: 30px
 
-            button
-                width: 47px
+        .MuiIconButton-root
+            height: 40px
+            padding: 8px
+            background-color: #e3e6e9
+            margin: 0 3px
+
+            .MuiSvgIcon-root
+                color: black
