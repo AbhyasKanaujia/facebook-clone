@@ -30,7 +30,7 @@ const Feed = () => {
       <PostCreator />
       {posts.map((post) => (
         <Post
-          key={post.data.id}
+          key={post.id}
           authorPic={post.data.authorPic}
           authorName={post.data.authorName}
           timeStamp={post.data.timeStamp}
