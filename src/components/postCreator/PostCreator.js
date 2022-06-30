@@ -48,7 +48,7 @@ const PostCreator = () => {
           <PhotoLibraryIcon style={{ color: "green" }} />
           <h3>Photo/Video</h3>
         </div>
-        <div className="postcreator__bottom--option">
+        <div className="postcreator__bottom--option nomob">
           <InsertEmoticonIcon style={{ color: "orange" }} />
           <h3>Feeling/Activity</h3>
         </div>

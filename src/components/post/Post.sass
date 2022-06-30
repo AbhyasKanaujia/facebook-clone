@@ -19,12 +19,15 @@
     &__info
         h3
             font-size: medium
-
         p
             font-size: small
             color: gray
 
     &__media
+        img
+            width: 100%
+
+    &__bottom
         padding: 10px 25px
         margin-top: 10px
         margin-bottom: 10px
@@ -52,3 +55,8 @@
 
             p
                 margin-left: 10px
+
+            &.nomob
+                display: none
+                @include mq(md)
+                    display: flex

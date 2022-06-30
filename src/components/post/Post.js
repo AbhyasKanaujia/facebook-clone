@@ -3,8 +3,8 @@ import { Avatar } from "@mui/material";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import ChatBubbleOutlinedIcon from "@mui/icons-material/ChatBubbleOutline";
 import NearMeIcon from "@mui/icons-material/NearMe";
-// import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-// import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import "./Post.sass";
 
 const Post = ({ authorPic, authorName, timeStamp, message, optionalImg }) => {
@@ -35,6 +35,10 @@ const Post = ({ authorPic, authorName, timeStamp, message, optionalImg }) => {
         <div className="post__options--option">
           <NearMeIcon />
           <p>Share</p>
+        </div>
+        <div className="post__options--option nomob">
+          <AccountCircleIcon />
+          <ExpandMoreIcon />
         </div>
       </div>
     </div>
